@@ -2,12 +2,12 @@ pipeline {
   agent any
  
   tools {
-  maven 'Maven3'
+  maven 'MAVEN_HOME'
   }
   stages {
     stage ('Build') {
       steps {
-      sh 'mvn clean install -f MyWebApp/pom.xml'
+      sh 'mvn clean '
       }
        
         stage ('Deploy to tomcat server'){
