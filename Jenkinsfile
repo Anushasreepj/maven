@@ -8,7 +8,7 @@ pipeline {
             steps { 
                 sh 'make' 
             }
-        }
+        
        
         stage ('Deploy to tomcat server'){
           steps{
@@ -17,7 +17,6 @@ pipeline {
         }
         }
     }
-}
 }
 
   
