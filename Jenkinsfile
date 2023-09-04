@@ -4,11 +4,6 @@ pipeline {
         skipStagesAfterUnstable()
     }
     stages {
-        stage('Build') { 
-            steps { 
-                sh 'Building the application' 
-            }
-        
        
         stage ('Deploy to tomcat server'){
           steps{
@@ -16,7 +11,6 @@ pipeline {
             }
         }
         }
-    }
-}
+    
 
   
