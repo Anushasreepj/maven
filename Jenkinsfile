@@ -1,14 +1,14 @@
-pipeline {
-  agent any
- 
-  tools {
-  maven 'MAVEN_HOME'
-  }
-  stages {
-    stage ('Build') {
-      steps {
-      sh 'mvn clean '
-      }
+pipeline { 
+    agent any 
+    options {
+        skipStagesAfterUnstable()
+    }
+    stages {
+        stage('Build') { 
+            steps { 
+                sh 'make' 
+            }
+        }
        
         stage ('Deploy to tomcat server'){
           steps{
